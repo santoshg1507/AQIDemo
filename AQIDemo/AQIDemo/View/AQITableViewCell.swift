@@ -18,6 +18,12 @@ class AQITableViewCell: UITableViewCell {
         self.cityNameLabel.text = data.city
         self.aqiLabel.text =  String(format: "%.2f", data.aqi)
         self.updatedTimeLabel.text = data.relativeDateString
+        self.changeBackgroundColor(data: data)
     }
     
+    func changeBackgroundColor(data: AQIData) {
+        UIView.animate(withDuration: 1.0) {
+            self.backgroundColor = UIColor.fromHexCode(hex: data.aqiRange().hexColorCode())
+        }
+    }
 }

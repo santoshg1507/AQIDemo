@@ -14,6 +14,7 @@ class AQIViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "AQI Data city wise"
         viewModel.setup(webSocketManager: WebSocketManager.shared)
         viewModel.delegate = self
     }
@@ -58,6 +59,7 @@ extension AQIViewController: UITableViewDelegate, UITableViewDataSource {
         if let aqiData = viewModel.aqiDataAt(index: indexPath.row) {
             cell.configureCell(data: aqiData)
         }
+        cell.accessoryType = .disclosureIndicator
         return cell
     }
     

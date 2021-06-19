@@ -31,4 +31,52 @@ class AQIData: Codable {
             return nil
         }
     }
+    
+    func aqiRange() -> AQIRange {
+        switch self.aqi {
+        case 0 ... 50:
+            return .good
+        case 51 ... 100:
+            return .satisfactory
+        case 101 ... 200:
+            return .moderate
+        case 201 ... 300:
+            return .poor
+        case 301 ... 400:
+            return .veryPoor
+        case 401 ... 500 :
+            return .severe
+        default:
+            return .severe
+        }
+    }
+    
 }
+
+enum AQIRange {
+    case good// 0-50
+    case satisfactory// 51-100
+    case moderate//101-200
+    case poor//201-300
+    case veryPoor//301-400
+    case severe//401-500
+    
+    func hexColorCode() -> String {
+        switch self {
+        case .good:
+            return "6AA55A"
+        case .satisfactory:
+            return "ABC564"
+        case .moderate:
+            return "FFF65F"
+        case .poor:
+            return "E79E4A"
+        case .veryPoor:
+            return "D84C3E"
+        case .severe:
+            return "A2382C"
+        }
+    }
+
+}
+
