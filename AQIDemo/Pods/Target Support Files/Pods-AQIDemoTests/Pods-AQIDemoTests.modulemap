@@ -1,0 +1,6 @@
+framework module Pods_AQIDemoTests {
+  umbrella header "Pods-AQIDemoTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
