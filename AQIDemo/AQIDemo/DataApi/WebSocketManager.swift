@@ -18,13 +18,17 @@ protocol WebSocketManagerProtocol {
     func handleWebSocketData(text: String)
     func disconnect()
     var delegate: WebSocketManagerDelegate? {get set}
+    func setTriggerTime(interval: Int)
 }
 
 class WebSocketManager: WebSocketManagerProtocol {
     
     private var websocket: WebSocket?
     weak var delegate: WebSocketManagerDelegate?
-    
+    var triggerTime = Date().timeIntervalSince1970
+    private var triggerInterval = 1
+    private var forceTrigger = true
+
     static let shared: WebSocketManager = WebSocketManager()
     
     private init() {
@@ -40,6 +44,11 @@ class WebSocketManager: WebSocketManagerProtocol {
                 self.handleEvent(event: event)
             }
         }
+    }
+    
+    func setTriggerTime(interval: Int) {
+        self.forceTrigger = true
+        self.triggerInterval = interval
     }
     
     func connect() {
@@ -78,9 +87,14 @@ class WebSocketManager: WebSocketManagerProtocol {
     }
     
     func handleWebSocketData(text: String) {
-        if let models = AQIData.objects(jsonString: text) {
-            self.delegate?.recievedAQIData(aqiList: models)
+        if forceTrigger || Int((Date().timeIntervalSince1970 - triggerTime)) > self.triggerInterval {
+            forceTrigger = false
+            self.triggerTime = Date().timeIntervalSince1970
+            if let models = AQIData.objects(jsonString: text) {
+                self.delegate?.recievedAQIData(aqiList: models)
+            }
         }
+
     }
     
 }

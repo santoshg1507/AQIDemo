@@ -7,7 +7,7 @@
 
 import Foundation
 
-class AQIData: Codable {
+struct AQIData: Codable {
     var city: String
     var aqi: Double
     var updatedAt = Date()

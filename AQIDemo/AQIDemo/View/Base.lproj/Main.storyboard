@@ -111,20 +111,38 @@
             </objects>
             <point key="canvasLocation" x="282.60869565217394" y="-131.25"/>
         </scene>
-        <!--View Controller-->
+        <!--Chart View Controller-->
         <scene sceneID="ZEb-0H-geH">
             <objects>
-                <viewController id="Vx9-UO-g7h" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AQIChartViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Vx9-UO-g7h" customClass="AQIChartViewController" customModule="AQIDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7V3-ZJ-APs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rCx-Yr-ls7" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="299" width="414" height="308"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="308" id="awo-Vz-dRl"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="G11-h1-NBa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rCx-Yr-ls7" firstAttribute="width" secondItem="7V3-ZJ-APs" secondAttribute="width" id="1aN-Rd-iyR"/>
+                            <constraint firstItem="rCx-Yr-ls7" firstAttribute="leading" secondItem="G11-h1-NBa" secondAttribute="leading" id="Hsx-LZ-jw6"/>
+                            <constraint firstItem="rCx-Yr-ls7" firstAttribute="centerY" secondItem="G11-h1-NBa" secondAttribute="centerY" id="Wg6-Tq-j2L"/>
+                            <constraint firstItem="G11-h1-NBa" firstAttribute="trailing" secondItem="rCx-Yr-ls7" secondAttribute="trailing" id="rEK-12-QJt"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="chartView" destination="rCx-Yr-ls7" id="yil-TJ-xhl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BKB-1b-Tdx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1168" y="-131"/>
+            <point key="canvasLocation" x="1166.6666666666667" y="-131.25"/>
         </scene>
     </scenes>
     <resources>

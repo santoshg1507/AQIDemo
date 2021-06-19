@@ -21,6 +21,10 @@
 		23209FA5267E50B6006D8416 /* BoilerPlate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23209FA4267E50B6006D8416 /* BoilerPlate.swift */; };
 		23209FAD267E50D8006D8416 /* AQITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23209FAC267E50D8006D8416 /* AQITableViewCell.swift */; };
 		23209FB2267E514A006D8416 /* AQIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23209FB1267E514A006D8416 /* AQIViewController.swift */; };
+		23209FC0267E68D5006D8416 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23209FBF267E68D5006D8416 /* DateExtension.swift */; };
+		23209FC5267E68E6006D8416 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23209FC4267E68E6006D8416 /* ColorExtension.swift */; };
+		23209FCA267E6B11006D8416 /* AQIChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23209FC9267E6B11006D8416 /* AQIChartViewController.swift */; };
+		23209FD0267E6BD4006D8416 /* AQIChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23209FCF267E6BD4006D8416 /* AQIChartViewModel.swift */; };
 		7E9860B2528705097DDA9AF5 /* Pods_AQIDemo_AQIDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD7BB3EA15815F57396BA2AA /* Pods_AQIDemo_AQIDemoUITests.framework */; };
 		9102F84C04C30EFE150FF48D /* Pods_AQIDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2AC67EA23818E32566F74B3 /* Pods_AQIDemoTests.framework */; };
 		D5B3195F92EE21EEE0D425AA /* Pods_AQIDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64F0F416F4EF3DA534646BF9 /* Pods_AQIDemo.framework */; };
@@ -65,6 +69,10 @@
 		23209FA4267E50B6006D8416 /* BoilerPlate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoilerPlate.swift; sourceTree = "<group>"; };
 		23209FAC267E50D8006D8416 /* AQITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQITableViewCell.swift; sourceTree = "<group>"; };
 		23209FB1267E514A006D8416 /* AQIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQIViewController.swift; sourceTree = "<group>"; };
+		23209FBF267E68D5006D8416 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		23209FC4267E68E6006D8416 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		23209FC9267E6B11006D8416 /* AQIChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQIChartViewController.swift; sourceTree = "<group>"; };
+		23209FCF267E6BD4006D8416 /* AQIChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQIChartViewModel.swift; sourceTree = "<group>"; };
 		37CF34A0A9BA69BEEC3DAE3B /* Pods-AQIDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AQIDemoTests.release.xcconfig"; path = "Target Support Files/Pods-AQIDemoTests/Pods-AQIDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		64F0F416F4EF3DA534646BF9 /* Pods_AQIDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AQIDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B0449D1E7C63544C2704CF9 /* Pods-AQIDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AQIDemo.debug.xcconfig"; path = "Target Support Files/Pods-AQIDemo/Pods-AQIDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -128,11 +136,11 @@
 		23209F51267E1908006D8416 /* AQIDemo */ = {
 			isa = PBXGroup;
 			children = (
-				23209FA3267E50A3006D8416 /* Utilities */,
 				23209F9D267E505C006D8416 /* DataApi */,
 				23209F91267E4FEA006D8416 /* ViewModel */,
 				23209F90267E4FE1006D8416 /* Model */,
 				23209F8F267E4FDA006D8416 /* View */,
+				23209FA3267E50A3006D8416 /* Utilities */,
 				23209F9C267E5046006D8416 /* AppResources */,
 				23209F60267E190C006D8416 /* Info.plist */,
 			);
@@ -163,6 +171,7 @@
 				23209F58267E1908006D8416 /* Main.storyboard */,
 				23209F56267E1908006D8416 /* ViewController.swift */,
 				23209FB1267E514A006D8416 /* AQIViewController.swift */,
+				23209FC9267E6B11006D8416 /* AQIChartViewController.swift */,
 				23209FAC267E50D8006D8416 /* AQITableViewCell.swift */,
 			);
 			path = View;
@@ -180,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				23209F92267E5004006D8416 /* AQIViewModel.swift */,
+				23209FCF267E6BD4006D8416 /* AQIChartViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -206,9 +216,19 @@
 		23209FA3267E50A3006D8416 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				23209FBE267E68A6006D8416 /* Extension */,
 				23209FA4267E50B6006D8416 /* BoilerPlate.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		23209FBE267E68A6006D8416 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				23209FBF267E68D5006D8416 /* DateExtension.swift */,
+				23209FC4267E68E6006D8416 /* ColorExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		8FAF2C2A9FBD94B7DCAB0E6E /* Pods */ = {
@@ -473,14 +493,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				23209F93267E5004006D8416 /* AQIViewModel.swift in Sources */,
+				23209FC0267E68D5006D8416 /* DateExtension.swift in Sources */,
 				23209F57267E1908006D8416 /* ViewController.swift in Sources */,
+				23209FCA267E6B11006D8416 /* AQIChartViewController.swift in Sources */,
 				23209F53267E1908006D8416 /* AppDelegate.swift in Sources */,
 				23209F98267E502A006D8416 /* AQIData.swift in Sources */,
 				23209F55267E1908006D8416 /* SceneDelegate.swift in Sources */,
 				23209FA5267E50B6006D8416 /* BoilerPlate.swift in Sources */,
 				23209F9F267E5088006D8416 /* WebSocketManager.swift in Sources */,
 				23209FAD267E50D8006D8416 /* AQITableViewCell.swift in Sources */,
+				23209FC5267E68E6006D8416 /* ColorExtension.swift in Sources */,
 				23209FB2267E514A006D8416 /* AQIViewController.swift in Sources */,
+				23209FD0267E6BD4006D8416 /* AQIChartViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

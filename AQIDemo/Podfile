@@ -5,7 +5,7 @@ target 'AQIDemo' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
   pod 'Starscream', '~> 4.0.0'
-
+  pod 'Charts'
   # Pods for AQIDemo
 
   target 'AQIDemoTests' do

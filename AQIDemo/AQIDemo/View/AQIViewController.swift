@@ -19,6 +19,11 @@ class AQIViewController: UIViewController {
         viewModel.delegate = self
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel.setWebSocketDelegate()
+    }
+    
     
 }
 
@@ -65,6 +70,12 @@ extension AQIViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        if let aqiData = viewModel.aqiDataAt(index: indexPath.row) {
+            if let aqiChartViewController = UIStoryboard.instantiateVC(storyboard: .main ,identifier: AQIChartViewController.className) as? AQIChartViewController {
+                aqiChartViewController.viewModel.data = aqiData
+                self.navigationController?.pushViewController(aqiChartViewController, animated: true)
+            }
+        }
     }
     
 }
