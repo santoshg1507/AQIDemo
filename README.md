@@ -17,7 +17,7 @@ Architecture : MVVM (Clean architecture)
 
 Project has Starscream library for handling websocket
 
-How run the project : Just checkout the project and open in xcode and run  😄 😄 😄
+How to run the project : Just checkout the project and open in xcode(v12.4) and run  😄 😄 😄
 
 
 
