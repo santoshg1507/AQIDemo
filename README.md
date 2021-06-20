@@ -12,7 +12,7 @@ second page: showing aqi live data graph. in graph data will be updated in given
 Language: Swift 5
 IED: Xcode 12.4
 
-Programing Approach: Protocol oriented programming 
+Programming Approach: Protocol oriented programming 
 
 Architecture : MVVM (Clean architecture)
 
