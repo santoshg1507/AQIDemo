@@ -1,5 +1,6 @@
 # AQIDemo
 **Description**
+
 Project is structured using MVVM architecture.
 This is demo app for showing AQI data. In project contain 2 page 
 first page: listing the city with latest AQI Data
