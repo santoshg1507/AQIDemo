@@ -1,2 +1,27 @@
 # AQIDemo
-Demo app
+**Description**
+Project is structured using MVVM architecture.
+This is demo app for showing AQI data. In project contain 2 page 
+first page: listing the city with latest AQI Data
+second page: showing aqi live data graph. in graph data will be updated in given time interval.
+
+
+**Technical Specification** 
+
+Language: Swift 5
+IED: Xcode 12.4
+
+Programing Approach: Protocol oriented programming 
+
+Architecture : MVVM (Clean architecture)
+
+Project has Starscream library for handling websocket
+
+How run the project : Just checkout the project and open in xcode and run  😄 😄 😄
+
+
+
+
+
+
+
