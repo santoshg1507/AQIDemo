@@ -9,6 +9,7 @@ import Foundation
 
 protocol AQIChartViewModelProtocol {
     var data: AQIData? { get set }
+    var interval: Int { get set }
     var aqilist: [Double] { get }
     var delegate: AQIDataDelegate? { get set }
     func setup()
@@ -21,12 +22,13 @@ class AQIChartViewModel: AQIChartViewModelProtocol {
     var data: AQIData?
     var aqilist = [Double]()
     weak var delegate: AQIDataDelegate?
-    var timer: Timer?
+    var interval = 5
+    
     init() {}
     
     func setup() {
         self.setWebSocketDelegate()
-        WebSocketManager.shared.setTriggerTime(interval: 5)
+        WebSocketManager.shared.setTriggerTime(interval: interval)
     }
     
     func setWebSocketDelegate() {
@@ -46,6 +48,7 @@ extension AQIChartViewModel: WebSocketManagerDelegate {
         queue.async { [weak self] in
             guard let self = self else { return }
             if let data = self.data {
+                self.aqilist.append(data.aqi)
                 for aqiData in aqiList {
                     if aqiData.city == data.city {
                         self.aqilist.append(aqiData.aqi)

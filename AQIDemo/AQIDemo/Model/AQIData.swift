@@ -33,22 +33,7 @@ struct AQIData: Codable {
     }
     
     func aqiRange() -> AQIRange {
-        switch self.aqi {
-        case 0 ... 50:
-            return .good
-        case 51 ... 100:
-            return .satisfactory
-        case 101 ... 200:
-            return .moderate
-        case 201 ... 300:
-            return .poor
-        case 301 ... 400:
-            return .veryPoor
-        case 401 ... 500 :
-            return .severe
-        default:
-            return .severe
-        }
+        return AQIRange.range(aqi: self.aqi)
     }
     
 }
@@ -75,6 +60,26 @@ enum AQIRange {
             return "D84C3E"
         case .severe:
             return "A2382C"
+        }
+    }
+    
+    static func range(aqi: Double) -> AQIRange {
+        let aqiInt = Int(aqi)
+        switch aqiInt {
+        case 0 ... 50:
+            return .good
+        case 51 ... 100:
+            return .satisfactory
+        case 101 ... 200:
+            return .moderate
+        case 201 ... 300:
+            return .poor
+        case 301 ... 400:
+            return .veryPoor
+        case 401 ... 500 :
+            return .severe
+        default:
+            return .severe
         }
     }
 

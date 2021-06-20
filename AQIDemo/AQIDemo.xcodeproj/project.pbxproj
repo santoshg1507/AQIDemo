@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		23209F53267E1908006D8416 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23209F52267E1908006D8416 /* AppDelegate.swift */; };
 		23209F55267E1908006D8416 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23209F54267E1908006D8416 /* SceneDelegate.swift */; };
-		23209F57267E1908006D8416 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23209F56267E1908006D8416 /* ViewController.swift */; };
 		23209F5A267E1908006D8416 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23209F58267E1908006D8416 /* Main.storyboard */; };
 		23209F5C267E190C006D8416 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23209F5B267E190C006D8416 /* Assets.xcassets */; };
 		23209F5F267E190C006D8416 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23209F5D267E190C006D8416 /* LaunchScreen.storyboard */; };
@@ -52,7 +51,6 @@
 		23209F4F267E1908006D8416 /* AQIDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AQIDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23209F52267E1908006D8416 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23209F54267E1908006D8416 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		23209F56267E1908006D8416 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		23209F59267E1908006D8416 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		23209F5B267E190C006D8416 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		23209F5E267E190C006D8416 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -169,7 +167,6 @@
 			isa = PBXGroup;
 			children = (
 				23209F58267E1908006D8416 /* Main.storyboard */,
-				23209F56267E1908006D8416 /* ViewController.swift */,
 				23209FB1267E514A006D8416 /* AQIViewController.swift */,
 				23209FC9267E6B11006D8416 /* AQIChartViewController.swift */,
 				23209FAC267E50D8006D8416 /* AQITableViewCell.swift */,
@@ -494,7 +491,6 @@
 			files = (
 				23209F93267E5004006D8416 /* AQIViewModel.swift in Sources */,
 				23209FC0267E68D5006D8416 /* DateExtension.swift in Sources */,
-				23209F57267E1908006D8416 /* ViewController.swift in Sources */,
 				23209FCA267E6B11006D8416 /* AQIChartViewController.swift in Sources */,
 				23209F53267E1908006D8416 /* AppDelegate.swift in Sources */,
 				23209F98267E502A006D8416 /* AQIData.swift in Sources */,
